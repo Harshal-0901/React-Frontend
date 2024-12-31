@@ -1,0 +1,126 @@
+.reusable-card {
+  width: 500px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-family: "Arial", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Align items to center vertically */
+  gap: 16px; /* Add a consistent gap between containers */
+}
+
+.text-container {
+  flex: 0; /* Prevent it from growing unnecessarily */
+  width: auto; /* Allow the width to adjust dynamically */
+  max-width: 250px; /* Optional: Limit the width */
+  margin-left: 20px;
+}
+
+.graph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center; /* Center content vertically */
+  margin-right: 30px;
+}
+
+.card-header h1 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.card-count {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 16px 0;
+  color: #333;
+}
+
+.card-breakdown {
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.growth-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.footer {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.footer-indicator {
+  font-size: 12px;
+  background-color: #ffede8;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .reusable-card {
+    flex-direction: column; /* Stack all items vertically */
+    padding: 12px; /* Reduce padding */
+    gap: 12px; /* Adjust gap between elements */
+  }
+
+  .text-container {
+    text-align: center; /* Center text for better readability */
+    max-width: 100%; /* Allow full width */
+    margin-left: 0; /* Remove margin for compact layout */
+  }
+
+  .graph-container {
+    align-items: center; /* Center-align graph content */
+    margin-right: 0; /* Remove right margin */
+  }
+
+  .card-count {
+    font-size: 28px; /* Scale down font size */
+  }
+
+  .card-header h1 {
+    font-size: 14px; /* Scale down header font size */
+  }
+
+  .footer {
+    text-align: center; /* Center-align footer */
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .reusable-card {
+    padding: 10px; /* Further reduce padding */
+    gap: 10px;
+  }
+
+  .card-count {
+    font-size: 24px; /* Scale down further for small screens */
+  }
+
+  .card-header h1 {
+    font-size: 12px;
+  }
+
+  .growth-indicator {
+    font-size: 10px; /* Adjust growth indicator font size */
+  }
+
+  .footer-indicator {
+    font-size: 10px; /* Adjust footer indicator font size */
+    padding: 2px 6px; /* Compact padding */
+  }
+}

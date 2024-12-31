@@ -1,0 +1,160 @@
+.section-container {
+  width: 70%;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.section-header {
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-header h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.section-header p {
+  margin: 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.section-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.section-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.section-item:last-child {
+  border-bottom: none;
+}
+
+.section-content {
+  flex: 1;
+}
+
+.section-title {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.section-time {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #888;
+}
+
+.section-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pin-button,
+.more-options {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #888;
+}
+
+.pin-button:hover,
+.more-options:hover {
+  color: #333;
+}
+
+.section-footer {
+  text-align: center;
+  padding: 12px;
+  background-color: #f9f9f9;
+}
+
+.see-all {
+  font-size: 14px;
+  color: #f00;
+  text-decoration: none;
+}
+
+.see-all:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .section-container {
+    width: 100%; /* Full width on smaller devices */
+    margin-top: 8px;
+  }
+
+  .section-header {
+    flex-direction: column; /* Stack the header content */
+    align-items: center;
+  }
+
+  .section-header h3 {
+    font-size: 15px; /* Slightly larger font for better readability */
+  }
+
+  .section-list {
+    padding: 8px; /* Add padding for better spacing */
+  }
+
+  .section-item {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .section-title {
+    font-size: 13px; /* Adjust font size */
+  }
+
+  .section-time {
+    font-size: 11px; /* Adjust font size */
+  }
+
+  .pin-button,
+  .more-options {
+    font-size: 12px; /* Ensure buttons are tap-friendly */
+  }
+}
+
+/* Media Query for screens smaller than 480px */
+@media (max-width: 480px) {
+  .section-header h3 {
+    font-size: 14px;
+  }
+
+  .section-header p {
+    font-size: 10px;
+  }
+
+  .section-actions {
+    gap: 4px; /* Minimize gap size */
+  }
+
+  .section-footer {
+    padding: 8px;
+  }
+
+  .see-all {
+    font-size: 11px;
+  }
+}

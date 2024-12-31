@@ -1,0 +1,113 @@
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* position: sticky; */
+  width: 77%;
+  position: absolute;
+  top: 10px;
+  /* z-index: 1000; */
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  background-color: #f5f7fa;
+  border-radius: 20px;
+  padding: 5px 15px;
+}
+
+.search-icon {
+  color: #888;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #333;
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.icon {
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #333;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .top-navbar {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align to the left */
+    padding: 10px; /* Compact padding */
+    width: 95%; /* Use more width for smaller screens */
+  }
+
+  .search-bar {
+    width: 100%; /* Expand search bar to take full width */
+    margin-bottom: 10px; /* Add spacing between elements */
+  }
+
+  .user-section {
+    width: 100%; /* Allow user section to take full width */
+    justify-content: space-between; /* Space out items */
+  }
+
+  .profile-name {
+    display: none; /* Hide the profile name for compact layout */
+  }
+}
+
+/* For screens smaller than 480px */
+@media (max-width: 480px) {
+  .search-bar {
+    padding: 5px; /* Further reduce padding */
+  }
+
+  .icon {
+    font-size: 16px; /* Slightly smaller icons */
+  }
+
+  .profile-pic {
+    width: 25px; /* Further reduce profile picture size */
+    height: 25px;
+  }
+}

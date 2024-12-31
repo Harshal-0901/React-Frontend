@@ -1,0 +1,218 @@
+/* dashboard.css */
+
+/* Dashboard Layout */
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+.main-menu {
+  margin-top: 8px;
+  margin-bottom: 40px;
+}
+
+.other {
+  margin-top: 8px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.menu-text {
+  position: absolute;
+  left: 15;
+  margin-left: 35px;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #ffffff;
+  width: 210px;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin-left: 20px;
+  flex-direction: column;
+}
+
+.sidebar h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  font-size: 1rem;
+  padding: 12px 0;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+  color: #ff5151;
+}
+
+/* Main Content */
+.mainContent {
+  flex: 1;
+  padding: 25px;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.layout {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Left Section */
+.leftSection {
+  position: absolute;
+  top: 80px;
+}
+
+.overview {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Adds space between the cards */
+  width: 75%; /* Full width within leftSection */
+}
+
+.card {
+  width: 75%;
+}
+
+.mid-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Adds space between the cards */
+  margin-top: 10px;
+  width: 75%; /* Full width within leftSection */
+}
+
+.section-div {
+  margin-top: 20px;
+  width: 107%; /* Full width within leftSection */
+}
+
+/* Right Section */
+.rightSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 80px;
+  right: 0;
+}
+
+/* .activity-card-div {
+  position: absolute;
+  right: 150px;
+}
+
+.schedule-card-div {
+    position: absolute;
+    right: 110px;
+    top: 400px
+  } */
+
+/* Right Section Cards */
+/* .rightSection > div {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+} */
+
+/* Scrollbar Styling */
+.mainContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.mainContent::-webkit-scrollbar-thumb {
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-left: 0;
+    padding: 10px;
+    box-shadow: none;
+  }
+
+  .sidebar h1 {
+    font-size: 1.5rem;
+  }
+
+  .sidebar ul li {
+    font-size: 0.9rem;
+  }
+
+  .mainContent {
+    padding: 15px;
+  }
+
+  .leftSection {
+    position: relative;
+    top: auto;
+    width: 100%;
+  }
+
+  .overview,
+  .mid-cards,
+  .section-div {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .rightSection {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar h1 {
+    font-size: 1.2rem;
+  }
+
+  .sidebar ul li {
+    padding: 8px 0;
+  }
+
+  .mainContent {
+    padding: 10px;
+  }
+
+  .overview,
+  .mid-cards,
+  .section-div {
+    gap: 5px;
+  }
+}
